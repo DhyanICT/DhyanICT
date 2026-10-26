@@ -14,6 +14,8 @@ from __future__ import annotations
 import json
 import os
 import sys
+import time
+import urllib.error
 import urllib.request
 from datetime import date
 
@@ -37,26 +39,48 @@ query($login: String!) {
     }
     pullRequests(states: MERGED) { totalCount }
     repositories(ownerAffiliations: OWNER, isFork: false, privacy: PUBLIC, first: 100) {
-      nodes { name languages(first: 10, orderBy: {field: SIZE, direction: DESC}) { edges { size node { name } } } }
+      nodes { name languages(first: 6, orderBy: {field: SIZE, direction: DESC}) { edges { size node { name } } } }
     }
   }
 }"""
 
 
-def fetch() -> dict:
+def fetch(attempts: int = 4) -> dict:
+    """Query GraphQL, retrying transient failures (5xx, timeouts) with backoff.
+
+    GitHub's GraphQL API occasionally returns 502/504 on contribution queries;
+    a later attempt almost always succeeds.
+    """
     token = os.environ.get("GITHUB_TOKEN")
     if not token:
         raise SystemExit("GITHUB_TOKEN is not set (use --mock for an offline preview)")
-    req = urllib.request.Request(
-        "https://api.github.com/graphql",
-        data=json.dumps({"query": QUERY, "variables": {"login": LOGIN}}).encode(),
-        headers={"Authorization": f"bearer {token}", "Content-Type": "application/json"},
-    )
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        body = json.load(resp)
-    if "errors" in body:
-        raise SystemExit(f"GraphQL error: {body['errors']}")
-    return body["data"]["user"]
+    payload = json.dumps({"query": QUERY, "variables": {"login": LOGIN}}).encode()
+    headers = {
+        "Authorization": f"bearer {token}",
+        "Content-Type": "application/json",
+        "User-Agent": f"{LOGIN}-profile-activity",
+    }
+    for attempt in range(1, attempts + 1):
+        try:
+            req = urllib.request.Request("https://api.github.com/graphql", data=payload, headers=headers)
+            with urllib.request.urlopen(req, timeout=45) as resp:
+                body = json.load(resp)
+            if body.get("data", {}).get("user"):
+                if "errors" in body:  # partial data is still usable
+                    print(f"GraphQL warnings: {body['errors']}")
+                return body["data"]["user"]
+            reason = f"GraphQL error: {body.get('errors')}"
+        except urllib.error.HTTPError as err:
+            if err.code < 500:  # auth or query problem: retrying won't help
+                raise SystemExit(f"GitHub API returned {err.code}: {err.read()[:300]!r}")
+            reason = f"HTTP {err.code}"
+        except (urllib.error.URLError, TimeoutError) as err:
+            reason = f"network error: {err}"
+        if attempt == attempts:
+            raise SystemExit(f"Giving up after {attempts} attempts ({reason}); existing panel left unchanged")
+        wait = 10 * 2 ** (attempt - 1)  # 10s, 20s, 40s
+        print(f"Attempt {attempt} failed ({reason}); retrying in {wait}s")
+        time.sleep(wait)
 
 
 def mock() -> dict:
