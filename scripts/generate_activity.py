@@ -132,10 +132,11 @@ def render(s: dict, t: dict) -> str:
             f'<rect x="{lx}" y="{y + 10}" width="{max(6, lw * pct / 100):.1f}" height="6" rx="3" fill="{t["amber"]}"/>'
         )
 
-    headline = (
-        f'{s["total"]:,} contributions in the past year, '
-        f'{s["prs"]} merged pull request{"s" if s["prs"] != 1 else ""}'
-    )
+    # PRs merged in private repos are invisible to the workflow token, so a
+    # zero here usually means "not visible", not "none". Leave it out then.
+    headline = f'{s["total"]:,} contributions in the past year'
+    if s["prs"] > 0:
+        headline += f', {s["prs"]} merged pull request{"s" if s["prs"] != 1 else ""}'
     stamp = f"Updated {date.today():%-d %b %Y}"
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-labelledby="t d">
 <title id="t">GitHub activity for {esc(LOGIN)}</title>
