@@ -26,7 +26,10 @@ jobs:
 
       - name: Render assets/activity-*.svg
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # ACTIVITY_TOKEN (optional): a read-only fine-grained token that can see
+          # private org repos, so merged PRs there are counted. Falls back to the
+          # built-in token, which only sees public data.
+          GITHUB_TOKEN: ${{ secrets.ACTIVITY_TOKEN || secrets.GITHUB_TOKEN }}
           PROFILE_LOGIN: ${{ github.repository_owner }}
         run: python scripts/generate_activity.py
 

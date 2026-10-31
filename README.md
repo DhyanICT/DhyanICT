@@ -3,7 +3,7 @@
   <img alt="Dhyan Patel, applied AI and full-stack engineer. I build AI systems that show their work." src="assets/hero-light.svg" width="100%">
 </picture>
 
-I'm a software engineer working where applied AI meets full-stack product. I build systems whose output can be checked: a GraphRAG medical assistant that cites every source and ships with its own evaluation harness, a computer-use agent that turns one LLM-guided run into a replayable, policy-checked artifact, and real-time web apps deployed with end-to-end tests.
+I'm a software engineer working where applied AI meets full-stack product. As a full-time Software Development Intern at Next Play Games, I ship payments, team management, coach messaging and an AI personal trainer for the SportX1 platform across its mobile app, web dashboard and database. On my own projects I build AI systems whose output can be checked: a GraphRAG medical assistant with its own evaluation harness, and a computer-use agent that turns one LLM-guided run into a replayable, policy-checked artifact.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-dhyan--patel-0F1B2D?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/dhyan-patel-94101b22a/)
 <!-- TODO: uncomment once filled in
@@ -17,25 +17,42 @@ $ whoami
 Dhyan Patel
 applied AI and full-stack engineer
 
-$ focus --now
-agentic automation, RAG,
-real-time web apps
+$ now
+SWE intern @ Next Play Games
+shipping SportX1: payments, teams,
+messaging, AI personal trainer
 
 $ stack --strongest
-Python, TypeScript, React,
-FastAPI, Node.js, Neo4j
+TypeScript, React, React Native,
+Supabase, PostgreSQL, Python
 
 $ open-to
 software, full-stack and
 applied AI engineering roles
 ```
 
-<!-- TODO (recommended): add 2–3 lines of real experience here, e.g.
 ## Experience
-**Role, Company** (Month YYYY – Month YYYY). One line on what you shipped and its result.
--->
 
-## Featured engineering work
+<a href="https://github.com/Next-Play-Games">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/plate-nextplay-dark.svg">
+  <img alt="Next Play Games: Software Development Intern on SportX1, June 2026 to present. 88 merged pull requests." src="assets/plate-nextplay-light.svg" width="100%">
+</picture>
+</a>
+
+**Software Development Intern, Next Play Games** (full-time, June 2026 – present)
+
+SportX1 is a sports coaching and team-management platform covering registration, payments, communication and AI-powered athlete training. I work across its React Native mobile app, React coaching dashboard and Supabase/PostgreSQL backend, with **88 merged pull requests across five company repositories** as of October 2026.
+
+- **Registration and payments.** Web and mobile flows for Square payments, installment plans, recurring invoices, coupons, and audited cash and check payments, covered by 142 targeted tests.
+- **Organizations and teams.** An organization, group and team hierarchy with cross-age-group reassignment, multi-team membership, parent notifications and admin permissions.
+- **AI personal trainer.** Personalized training plans, habit tracking, progress views, privacy-conscious sharing and server-validated XP, with 74 focused tests.
+- **Coach communication.** AI-assisted messaging, scheduled and recurring announcements with timezone handling, shared reply threads and reliable email delivery, covered by 161 tests.
+- **Backend and deployment reliability.** Tighter database permissions, concurrency handling and migration ordering, plus deployment workflows that retry only on confirmed HTTP 409 conflicts.
+
+**Stack.** TypeScript, React, React Native and Expo, Supabase, PostgreSQL, Square, GitHub Actions
+
+## Featured projects
 
 <a href="https://github.com/DhyanICT/Trusted_Medical_AI">
 <picture>
@@ -140,7 +157,7 @@ flowchart LR
 
 ## More shipped work
 
-**[Rules Quiz API](https://github.com/DhyanICT/nextplay-rules-quiz-fullstack-assessment)**. A TypeScript and Express API with Zod-validated endpoints and attempt scoring, tested with Jest and Supertest, plus a React (Vite) client and a React Native screen.
+**[Rules Quiz API](https://github.com/DhyanICT/nextplay-rules-fullstack)**. A TypeScript and Express API with Zod-validated endpoints and attempt scoring, tested with Jest and Supertest, plus a React (Vite) client and a React Native screen.
 
 **[Task Board](https://github.com/DhyanICT/Task_Board_NextPlay)**. A Next.js 14 and Supabase Kanban board where anonymous sessions and row-level security keep each guest's tasks private, with drag and drop, search and priority filters. [Live](https://taskboard-gamma-ten.vercel.app/)
 
@@ -154,24 +171,25 @@ flowchart LR
 
 | Capability | Where to see it |
 | --- | --- |
+| Production ownership | 88 merged PRs on SportX1 across mobile, web and database, from payments to deployment workflows |
 | LLM systems with measured quality | TrustMed retrieval and citation evals; CUA's split between LLM discovery and LLM-free replay |
-| Safety and data integrity | CUA allowlist, redaction and handoff; Proofboard server-enforced voting; Task Board row-level security |
-| Testing as part of the build | Playwright two-user specs, Jest and Supertest, Python unit tests |
-| End-to-end ownership | Deployed apps with live links, setup guides and documented trade-offs |
+| Safety and data integrity | SportX1 database permissions and concurrency handling; CUA allowlist, redaction and handoff; Proofboard server-enforced voting |
+| Testing as part of the build | SportX1 test suites for payments (142), AI trainer (74) and messaging (161); Playwright two-user specs; Jest and Supertest |
+| End-to-end ownership | Features shipped from schema to mobile UI; deployed side projects with live links and documented trade-offs |
 
 ## Capabilities
 
-**Languages.** Python, TypeScript, JavaScript, Java, SQL, Cypher
+**Languages.** TypeScript, Python, JavaScript, SQL, Java, Cypher
 
 **AI and retrieval.** RAG over knowledge graphs, embeddings (sentence-transformers), FAISS vector search, LLM agents and planners, retrieval evaluation (precision, recall, F1 at k)
 
-**Backend.** FastAPI, Node.js, Express, REST API design, Zod validation, Supabase Auth and row-level security, Cloudflare Workers and Durable Objects
+**Backend.** Supabase (PostgreSQL, Auth, row-level security), FastAPI, Node.js, Express, REST API design, Zod validation, Square payments, Cloudflare Workers and Durable Objects
 
-**Frontend and mobile.** React, Next.js, Vite, Tailwind CSS, Streamlit, Progressive Web Apps, Android (Java)
+**Frontend and mobile.** React, React Native and Expo, Next.js, Vite, Tailwind CSS, Streamlit, Progressive Web Apps, Android (Java)
 
-**Data.** Neo4j, PostgreSQL (Supabase), pandas, Parquet, web scraping and ETL
+**Data.** PostgreSQL (schema design, migrations, permissions), Neo4j, pandas, Parquet, web scraping and ETL
 
-**Testing and automation.** Playwright, Jest, Supertest, Vitest, unittest, Chrome DevTools Protocol
+**Testing and delivery.** Playwright, Jest, Supertest, Vitest, unittest, GitHub Actions deployment workflows, Chrome DevTools Protocol
 
 ## Activity
 

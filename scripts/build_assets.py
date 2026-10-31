@@ -23,6 +23,13 @@ HERO = {
 # Every number here is taken from the repository it describes.
 PLATES = [
     {
+        "slug": "plate-nextplay",
+        "name": "Next Play Games",
+        "line": "Software Development Intern on SportX1, June 2026 to present",
+        "pipeline": ["register", "pay", "join team", "coach messages", "AI training"],
+        "proof": "88 merged PRs",
+    },
+    {
         "slug": "plate-trustmed",
         "name": "TrustMed AI",
         "line": "Medical Q&A grounded in a knowledge graph, with citations",
