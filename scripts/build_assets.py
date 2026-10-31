@@ -252,70 +252,6 @@ def retrieval_chart(t: dict) -> str:
 </svg>"""
 
 
-# ---------------------------------------------------------------- ticker ---
-
-TICKER = [
-    "88 merged PRs at Next Play Games",
-    "SportX1: payments, teams, coach messaging, AI trainer",
-    "TrustMed AI: Recall@15 87.5% on hand-labelled ground truth",
-    "Computer-use agent: replays with 0 LLM calls",
-    "Proofboard: real-time decisions, 14 tests, deployed",
-]
-
-
-def ticker(t: dict) -> str:
-    """A news-style strip: a fixed label on the left, highlights scrolling right to left.
-
-    The item run is drawn twice back to back and shifted by exactly one run width,
-    so the loop is seamless. Speed is constant (px/s) however much text there is.
-    """
-    W, H = 1200, 72
-    size, gap = 25, 70
-    label = "HIGHLIGHTS"
-    label_w = text_width(label, "sans-bold", 19) + 48
-    xs, x = [], 0.0
-    for item in TICKER:
-        xs.append(x)
-        x += text_width(item, "sans", size) + gap
-    run = x
-    speed = 55  # px per second: readable, not frantic
-    dur = run / speed
-
-    def items(offset: float) -> str:
-        out = []
-        for ix, item in zip(xs, TICKER):
-            out.append(f'<text x="{offset + ix:.1f}" y="{H / 2 + 9}" class="it">{esc(item)}</text>')
-            out.append(f'<circle cx="{offset + ix - gap / 2:.1f}" cy="{H / 2}" r="4" class="sep"/>')
-        return "".join(out)
-
-    start = label_w + 40
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-labelledby="t d">
-<title id="t">Highlights</title>
-<desc id="d">{esc('. '.join(TICKER))}.</desc>
-<defs>
-<clipPath id="lane"><rect x="{label_w}" y="0" width="{W - label_w}" height="{H}"/></clipPath>
-<linearGradient id="fadeL" x1="0" x2="1"><stop offset="0" stop-color="{t['bg']}"/><stop offset="1" stop-color="{t['bg']}" stop-opacity="0"/></linearGradient>
-<linearGradient id="fadeR" x1="0" x2="1"><stop offset="0" stop-color="{t['bg']}" stop-opacity="0"/><stop offset="1" stop-color="{t['bg']}"/></linearGradient>
-</defs>
-<style>
-{font_css('sans', 'sans-bold')}
-.it{{font-family:{family('sans')};font-size:{size}px;fill:{t['text']};white-space:pre}}
-.sep{{fill:{t['teal']}}}
-.lb{{font-family:{family('sans')};font-weight:600;font-size:19px;letter-spacing:2px;fill:{t['bg']}}}
-.roll{{animation:roll {dur:.1f}s linear infinite}}
-@keyframes roll{{from{{transform:translateX(0)}}to{{transform:translateX(-{run:.1f}px)}}}}
-@media (prefers-reduced-motion:reduce){{.roll{{animation:none}}}}
-</style>
-<rect x="1" y="1" width="{W - 2}" height="{H - 2}" rx="14" fill="{t['bg']}" stroke="{t['line']}" stroke-width="1.5"/>
-<g clip-path="url(#lane)"><g class="roll">{items(start)}{items(start + run)}</g></g>
-<rect x="{label_w}" y="2" width="40" height="{H - 4}" fill="url(#fadeL)"/>
-<rect x="{W - 60}" y="2" width="58" height="{H - 4}" fill="url(#fadeR)"/>
-<rect x="1" y="1" width="{label_w}" height="{H - 2}" rx="14" fill="{t['amber']}"/>
-<rect x="{label_w - 14}" y="1" width="14" height="{H - 2}" fill="{t['amber']}"/>
-<text x="{label_w / 2 + 1}" y="{H / 2 + 7}" text-anchor="middle" class="lb">{label}</text>
-</svg>"""
-
-
 # ------------------------------------------------------------------ main ---
 
 if __name__ == "__main__":
@@ -324,5 +260,4 @@ if __name__ == "__main__":
         for p in PLATES:
             write(p["slug"], theme, plate(tokens, p))
         write("trustmed-retrieval", theme, retrieval_chart(tokens))
-        write("ticker", theme, ticker(tokens))
     print("assets written")
