@@ -142,7 +142,7 @@ def hero(t: dict, mobile: bool = False) -> str:
 @keyframes ring{{0%{{opacity:.9;transform:scale(1)}}100%{{opacity:0;transform:scale(2.6)}}}}
 @media (prefers-reduced-motion:reduce){{*{{animation:none!important}}}}
 </style>
-<g transform="translate(0,26)">{graph}</g>
+<g transform="translate(-328.5,-41) scale(1.35)">{graph}</g>
 <text x="0" y="{120 if mobile else 145}" class="name">{esc(HERO['name'])}</text>
 <text x="0" y="{183 if mobile else 210}" class="role">{esc(HERO['role'])}</text>
 {thesis}
