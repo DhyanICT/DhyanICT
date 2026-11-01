@@ -118,7 +118,7 @@ def hero(t: dict, mobile: bool = False) -> str:
 <desc id="desc">{esc(HERO['thesis'])} A signal travels from a question through graph and vector retrieval and an LLM to an answer with citations.</desc>
 <style>
 {font_css('serif', 'sans', 'sans-bold', 'mono')}
-.name{{font-family:{family('serif')};font-weight:600;font-size:{108 if mobile else 144}px;fill:{t['text']};letter-spacing:-1px}}
+.name{{font-family:{family('serif')};font-weight:600;font-size:{108 if mobile else 144}px;fill:{t['text']};letter-spacing:2px}}
 .role{{font-family:{family('sans')};font-weight:600;font-size:34px;fill:{t['text']}}}
 .thesis{{font-family:{family('sans')};font-size:31px;fill:{t['muted']}}}
 .lbl{{font-family:{family('mono')};font-weight:500;font-size:22px;fill:{t['muted']}}}
