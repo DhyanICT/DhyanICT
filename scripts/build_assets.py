@@ -63,13 +63,10 @@ RETRIEVAL = {
 # ------------------------------------------------------------------ hero ---
 
 
-def hero(t: dict, mobile: bool = False) -> str:
-    """Open, responsive header with the graph art and the animated answer trace."""
-    W, H = (600, 440) if mobile else (1200, 400)
-    trace = ["question", "retrieval", "LLM", "cited answer"] if mobile else HERO["trace"]
-    x0, x1 = (12, W - 22) if mobile else (12, W - 24)
-    ty = 352 if mobile else 318
-    nodes = [x0 + (x1 - x0) * i / (len(trace) - 1) for i in range(len(trace))]
+def hero(t: dict) -> str:
+    W, H = 1200, 400
+    x0, x1, ty = 66, 1134, 312
+    nodes = [x0 + (x1 - x0) * i / (len(HERO["trace"]) - 1) for i in range(len(HERO["trace"]))]
     length = x1 - x0
     dur, delay = 2.2, 0.5
 
@@ -77,13 +74,14 @@ def hero(t: dict, mobile: bool = False) -> str:
         return delay + dur * (x - x0) / length
 
     labels = []
-    for i, (x, label) in enumerate(zip(nodes, trace)):
+    for i, (x, label) in enumerate(zip(nodes, HERO["trace"])):
         anchor = "start" if i == 0 else "end" if i == len(nodes) - 1 else "middle"
-        dx = -10 if i == 0 else 14 if i == len(nodes) - 1 else 0
+        dx = -10 if i == 0 else 10 if i == len(nodes) - 1 else 0
         cls = "lbl lbl-end" if i == len(nodes) - 1 else "lbl"
         labels.append(
-            f'<text x="{x + dx:.0f}" y="{ty + 48}" text-anchor="{anchor}" class="{cls}">{esc(label)}</text>'
+            f'<text x="{x + dx:.0f}" y="{ty + 50}" text-anchor="{anchor}" class="{cls}">{esc(label)}</text>'
         )
+
     mids = "".join(
         f'<circle cx="{x:.1f}" cy="{ty}" r="8" class="node" style="animation-delay:{arrival(x):.2f}s"/>'
         for x in nodes[:-1]
@@ -104,22 +102,13 @@ def hero(t: dict, mobile: bool = False) -> str:
         for i, (x, y) in enumerate(pts)
     )
 
-    if mobile:
-        graph = ""
-        thesis = (
-            '<text x="0" y="225" class="thesis">I build AI systems</text>'
-            '<text x="0" y="267" class="thesis">that show their work.</text>'
-        )
-    else:
-        thesis = f'<text x="0" y="264" class="thesis">{esc(HERO["thesis"])}</text>'
-
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-labelledby="title desc">
 <title id="title">{esc(HERO['name'])}: {esc(HERO['role'])}</title>
-<desc id="desc">{esc(HERO['thesis'])} A signal travels from a question through graph and vector retrieval and an LLM to an answer with citations.</desc>
+<desc id="desc">{esc(HERO['thesis'])} A signal travels from a question through retrieval and an LLM to an answer with citations.</desc>
 <style>
 {font_css('serif', 'sans', 'sans-bold', 'mono')}
-.name{{font-family:{family('serif')};font-weight:600;font-size:{108 if mobile else 144}px;fill:{t['text']};letter-spacing:2px}}
-.role{{font-family:{family('sans')};font-weight:600;font-size:34px;fill:{t['text']}}}
+.name{{font-family:{family('serif')};font-size:108px;fill:{t['text']};letter-spacing:-1px}}
+.role{{font-family:{family('sans')};font-weight:600;font-size:31px;fill:{t['text']}}}
 .thesis{{font-family:{family('sans')};font-size:31px;fill:{t['muted']}}}
 .lbl{{font-family:{family('mono')};font-weight:500;font-size:22px;fill:{t['muted']}}}
 .lbl-end{{fill:{t['teal']}}}
@@ -142,10 +131,11 @@ def hero(t: dict, mobile: bool = False) -> str:
 @keyframes ring{{0%{{opacity:.9;transform:scale(1)}}100%{{opacity:0;transform:scale(2.6)}}}}
 @media (prefers-reduced-motion:reduce){{*{{animation:none!important}}}}
 </style>
-<g transform="translate(-328.5,-41) scale(1.35)">{graph}</g>
-<text x="0" y="{120 if mobile else 145}" class="name">{esc(HERO['name'])}</text>
-<text x="0" y="{183 if mobile else 210}" class="role">{esc(HERO['role'])}</text>
-{thesis}
+<rect x="1" y="1" width="{W - 2}" height="{H - 2}" rx="24" fill="{t['bg']}" stroke="{t['line']}" stroke-width="1.5"/>
+<g>{graph}</g>
+<text x="60" y="144" class="name">{esc(HERO['name'])}</text>
+<text x="66" y="210" class="role">{esc(HERO['role'])}</text>
+<text x="66" y="253" class="thesis">{esc(HERO['thesis'])}</text>
 <line x1="{x0}" y1="{ty}" x2="{x1}" y2="{ty}" class="rail"/>
 <line x1="{x0}" y1="{ty}" x2="{x1}" y2="{ty}" class="signal"/>
 {mids}
@@ -262,13 +252,46 @@ def retrieval_chart(t: dict) -> str:
 </svg>"""
 
 
+# --------------------------------------------------------------- buttons ---
+
+BUTTONS = [
+    {"slug": "btn-portfolio", "label": "Portfolio", "primary": True},
+    {"slug": "btn-resume", "label": "Resume", "primary": False},
+    {"slug": "btn-linkedin", "label": "LinkedIn", "primary": False},
+]
+
+
+def button(t: dict, b: dict) -> str:
+    """Pill-shaped link button with an outward arrow drawn as a path (no glyph needed)."""
+    size, pad, arrow, gap = 26, 34, 16, 14
+    label_w = text_width(b["label"], "sans-bold", size)
+    W, H = round(pad * 2 + label_w + gap + arrow), 68
+    if b["primary"]:
+        fill, stroke, ink = t["teal"], t["teal"], t["bg"]
+    else:
+        fill, stroke, ink = t["bg"], t["line"], t["text"]
+    ax = pad + label_w + gap  # arrow box left edge
+    ay = H / 2 - arrow / 2
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-label="{esc(b['label'])}">
+<style>
+{font_css('sans-bold')}
+.l{{font-family:{family('sans')};font-weight:600;font-size:{size}px;fill:{ink}}}
+.a{{fill:none;stroke:{ink if b['primary'] else t['teal']};stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}}
+</style>
+<rect x="1.5" y="1.5" width="{W - 3}" height="{H - 3}" rx="{(H - 3) / 2}" fill="{fill}" stroke="{stroke}" stroke-width="2"/>
+<text x="{pad}" y="{H / 2 + 9}" class="l">{esc(b['label'])}</text>
+<path d="M{ax:.1f} {ay + arrow:.1f} L{ax + arrow:.1f} {ay:.1f} M{ax + 5:.1f} {ay:.1f} H{ax + arrow:.1f} V{ay + arrow - 5:.1f}" class="a"/>
+</svg>"""
+
+
 # ------------------------------------------------------------------ main ---
 
 if __name__ == "__main__":
     for theme, tokens in THEMES.items():
         write("hero", theme, hero(tokens))
-        write("hero-mobile", theme, hero(tokens, mobile=True))
         for p in PLATES:
             write(p["slug"], theme, plate(tokens, p))
         write("trustmed-retrieval", theme, retrieval_chart(tokens))
+        for b in BUTTONS:
+            write(b["slug"], theme, button(tokens, b))
     print("assets written")
