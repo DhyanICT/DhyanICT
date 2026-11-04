@@ -1,32 +1,23 @@
 <picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/hero-mobile-dark.svg">
+  <source media="(max-width: 600px)" srcset="assets/hero-mobile-light.svg">
   <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
-  <img alt="Dhyan Patel, applied AI and full-stack engineer. I build AI systems that show their work." src="assets/hero-light.svg" width="100%">
+  <img alt="Dhyan Patel. Applied AI and full-stack engineer. I build AI systems that show their work: question, graph and vector retrieval, LLM, answer with citations." src="assets/hero-light.svg" width="100%">
 </picture>
 
+<p align="center">
+  <a href="#user-content-selected-work"><img src="https://img.shields.io/badge/Projects-0F1B2D?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMkVDNEI2IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI%2BPHBhdGggZD0iTTUgNGg0bDMgM2g3YTIgMiAwIDAgMSAyIDJ2OGEyIDIgMCAwIDEgLTIgMmgtMTRhMiAyIDAgMCAxIC0yIC0ydi0xMWEyIDIgMCAwIDEgMiAtMiIvPjwvc3ZnPg%3D%3D" alt="Projects" height="30"></a>&nbsp;
+  <a href="#user-content-experience"><img src="https://img.shields.io/badge/Experience-0F1B2D?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRjVBNTI0IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI%2BPHBhdGggZD0iTTMgOWEyIDIgMCAwIDEgMiAtMmgxNGEyIDIgMCAwIDEgMiAydjlhMiAyIDAgMCAxIC0yIDJoLTE0YTIgMiAwIDAgMSAtMiAtMnoiLz48cGF0aCBkPSJNOCA3di0yYTIgMiAwIDAgMSAyIC0yaDRhMiAyIDAgMCAxIDIgMnYyIi8%2BPHBhdGggZD0iTTMgMTNhMjAgMjAgMCAwIDAgMTggMCIvPjwvc3ZnPg%3D%3D" alt="Experience" height="30"></a>&nbsp;
+  <a href="https://www.linkedin.com/in/dhyan-patel-94101b22a/"><img src="https://img.shields.io/badge/LinkedIn-0F1B2D?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjM0I4RkUwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI%2BPHBhdGggZD0iTTggMTF2NSIvPjxwYXRoIGQ9Ik04IDh2LjAxIi8%2BPHBhdGggZD0iTTEyIDE2di01Ii8%2BPHBhdGggZD0iTTE2IDE2di0zYTIgMiAwIDEgMCAtNCAwIi8%2BPHBhdGggZD0iTTMgN2E0IDQgMCAwIDEgNCAtNGgxMGE0IDQgMCAwIDEgNCA0djEwYTQgNCAwIDAgMSAtNCA0aC0xMGE0IDQgMCAwIDEgLTQgLTR6Ii8%2BPC9zdmc%2B" alt="LinkedIn" height="30"></a>&nbsp;
+  <a href="https://leetcode.com/u/3oZegdX01z/"><img src="https://img.shields.io/badge/LeetCode-0F1B2D?style=for-the-badge&logo=leetcode&logoColor=FFA116" alt="LeetCode" height="30"></a>&nbsp;
+  <a href="https://drive.google.com/file/d/1RZgNlIfZNr8oAd9yvauug32a_R7NBcpE/view?usp=sharing"><img src="https://img.shields.io/badge/Resume-0F1B2D?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRUFGMEY3IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI%2BPHBhdGggZD0iTTE0IDN2NGExIDEgMCAwIDAgMSAxaDQiLz48cGF0aCBkPSJNMTcgMjFoLTEwYTIgMiAwIDAgMSAtMiAtMnYtMTRhMiAyIDAgMCAxIDIgLTJoN2w1IDV2MTFhMiAyIDAgMCAxIC0yIDJ6Ii8%2BPHBhdGggZD0iTTkgOWwxIDAiLz48cGF0aCBkPSJNOSAxM2w2IDAiLz48cGF0aCBkPSJNOSAxN2w2IDAiLz48L3N2Zz4%3D" alt="Resume" height="30"></a>
+</p>
+
+<p align="center">Currently shipping SportX1 at <a href="https://github.com/Next-Play-Games">Next Play Games</a>.</p>
 
 <br>
 
-<p align="center">
-  Full-time <b>Software Development Intern</b> at <a href="https://github.com/Next-Play-Games"><b>Next Play Games</b></a>, shipping payments, team management, coach messaging and an AI personal trainer for the <b>SportX1</b> platform. On my own projects, I build AI systems whose output can be checked.
-</p>
-
-<p align="center">
-  <a href="https://dhyanict.github.io/Dhyan_Website/"><img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-dhyanict.github.io-0F1B2D?style=for-the-badge&logo=googlechrome&logoColor=white"></a>
-  <a href="https://dhyanict.github.io/Dhyan_Website/assets/Dhyan_Patel_Resume.pdf"><img alt="Resume" src="https://img.shields.io/badge/Resume-PDF-0F1B2D?style=for-the-badge&logo=readthedocs&logoColor=white"></a>
-  <a href="https://www.linkedin.com/in/dhyan-patel-94101b22a/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-dhyan--patel-0F1B2D?style=for-the-badge&logo=linkedin&logoColor=white"></a>
-  <!-- TODO: add an email badge in the same style -->
-</p>
-
-<p align="center">
-  <a href="#user-content-about-me">01&ensp;About me</a>&emsp;&emsp;<a href="#user-content-page-2">02&ensp;Next Play Games</a>&emsp;&emsp;<a href="#user-content-page-3">03&ensp;Featured projects</a>
-</p>
-
-<table>
-<tr>
-<td valign="top">
-<p align="right"><sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;01&nbsp;/&nbsp;03</sub><a name="page-1"></a></p>
-
-### About me
+## About me
 
 ```console
 $ whoami
@@ -53,99 +44,27 @@ applied AI engineering roles
 - **I design for failure.** Allowlists, human handoffs and rules enforced on the server.
 - **I ship end to end.** Schema, API and mobile UI, then the deployment workflow.
 
-<p align="right"><a href="#user-content-page-2">Next: Next Play Games →</a></p>
+<br>
 
-</td>
-<td valign="top">
-<p align="right"><sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;02&nbsp;/&nbsp;03</sub><a name="page-2"></a></p>
+## Selected work
 
-### Next Play Games
+### TrustMed AI
 
-<a href="https://github.com/Next-Play-Games">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/plate-nextplay-dark.svg">
-  <img alt="Next Play Games: Software Development Intern on SportX1, June 2026 to present. 88 merged pull requests." src="assets/plate-nextplay-light.svg" width="100%">
-</picture>
-</a>
-
-**Software Development Intern**, full-time, June 2026 – present
-
-SportX1 is a sports coaching and team-management platform. I work across its React Native app, React dashboard and Supabase/PostgreSQL backend, with **88 merged pull requests across five repositories** as of October 2026.
-
-- **Registration and payments.** Square payments, installment plans, recurring invoices, coupons and audited cash and check payments. 142 targeted tests.
-- **Organizations and teams.** Organization, group and team hierarchy with reassignment, multi-team membership, parent notifications and admin permissions.
-- **AI personal trainer.** Training plans, habit tracking, progress, privacy-conscious sharing and server-validated XP. 74 focused tests.
-- **Coach communication.** AI-assisted messaging, scheduled and recurring announcements, reply threads and reliable email delivery. 161 tests.
-- **Reliability.** Database permissions, concurrency, migration ordering, and deploys that retry only on confirmed HTTP 409 conflicts.
-
-**Stack.** TypeScript, React, React Native and Expo, Supabase, PostgreSQL, Square, GitHub Actions
-
-<p align="right"><a href="#user-content-page-3">Next: Featured projects →</a></p>
-
-</td>
-<td valign="top">
-<p align="right"><sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;03&nbsp;/&nbsp;03</sub><a name="page-3"></a></p>
-
-### Featured projects
+**Health questions, answered with cited evidence.**
 
 <a href="https://github.com/DhyanICT/Trusted_Medical_AI">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/plate-trustmed-dark.svg">
-  <img alt="TrustMed AI: medical Q&A grounded in a knowledge graph, with citations. Recall at 15: 87.5%." src="assets/plate-trustmed-light.svg" width="100%">
-</picture>
+  <img src="assets/trustmed-flow.png" width="100%" alt="TrustMed AI workflow: a question retrieves medical evidence, which grounds an answer with citations.">
 </a>
 
-GraphRAG over a Neo4j graph of 1,000+ Mayo Clinic pages and 1,246 patient threads, with FAISS retrieval and Llama 3.1 answers that cite every source. Measured with a ground-truth evaluation harness.
-
-[Code](https://github.com/DhyanICT/Trusted_Medical_AI) &nbsp;/&nbsp; [Evaluation](https://github.com/DhyanICT/Trusted_Medical_AI/tree/main/evaluations)
-
-<a href="https://github.com/DhyanICT/Computer-Use-Automation">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/plate-cua-dark.svg">
-  <img alt="Computer-Use Automation: an agent learns a UI task once; replays run without an LLM." src="assets/plate-cua-light.svg" width="100%">
-</picture>
-</a>
-
-One LLM-guided discovery run becomes a typed, parameterised artifact that replays deterministically, with an allowlist, log redaction and human handoff for risky actions. Hand-written Chrome DevTools Protocol client.
-
-[Code](https://github.com/DhyanICT/Computer-Use-Automation) &nbsp;/&nbsp; [Design report](https://github.com/DhyanICT/Computer-Use-Automation/blob/main/REPORT.md)
-
-<p align="right"><a href="#user-content-about-me">← Back to About me</a></p>
-
-</td>
-</tr>
-</table>
-
-<details>
-<summary><b>More shipped work</b></summary>
-<br>
-
-**[Proofboard](https://github.com/DhyanICT/deepspace_proofboard)**. Real-time group decisions with a visible rationale: server-enforced one-vote-per-person in a Durable Object, live presence, and a two-browser Playwright suite. [Live](https://proofboard-dhyan.app.space)
-
-**[Rules Quiz API](https://github.com/DhyanICT/nextplay-rules-fullstack)**. A TypeScript and Express API with Zod-validated endpoints and attempt scoring, tested with Jest and Supertest, plus a React (Vite) client and a React Native screen.
-
-**[Task Board](https://github.com/DhyanICT/Task_Board_NextPlay)**. A Next.js 14 and Supabase Kanban board where anonymous sessions and row-level security keep each guest's tasks private, with drag and drop, search and priority filters. [Live](https://taskboard-gamma-ten.vercel.app/)
-
-**[SparkScope](https://github.com/DhyanICT/Spark_Homes_Developer)**. An offline-first PWA for estimating repair costs during property walkthroughs. ZIP and Excel export are implemented in plain JavaScript with no dependencies, so exports work without a connection.
-
-**[CycleSync](https://github.com/DhyanICT/CycleSync)**. A native Android (Java) cycle tracker with an offline chatbot that answers in English and Gujarati.
-
-**[NYC taxi trip graph](https://github.com/DhyanICT/DPS1)**. A pipeline that cleans a month of NYC taxi trips from Parquet with pandas and loads them into Neo4j as a location graph using Cypher, uniqueness constraints and startup retries.
-
-</details>
-
-<details>
-<summary><b>Architecture and evaluation</b></summary>
-<br>
-
-**TrustMed AI retrieval quality**
+A medical Q&A assistant that combines a Neo4j knowledge graph, FAISS vector search and Llama 3.1. Every answer cites its sources and keeps trusted medical information separate from patient experiences.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/trustmed-retrieval-dark.svg">
-  <img alt="Retrieval quality on a 7-query ground-truth set. Top 5: precision 74.3, recall 77.7, F1 74.4. Top 10: 68.6, 81.3, 68.9. Top 15: 69.5, 87.5, 70.6." src="assets/trustmed-retrieval-light.svg" width="100%">
+  <img alt="TrustMed retrieval results on a 7-query ground-truth set: Precision at 5 is 74.3%, Recall at 15 is 87.5%, and F1 at 15 is 70.6%." src="assets/trustmed-retrieval-light.svg" width="100%">
 </picture>
 
-**TrustMed AI architecture**
+<details>
+<summary><b>Architecture</b></summary>
 
 ```mermaid
 flowchart TB
@@ -160,7 +79,24 @@ flowchart TB
   LLM --> A[Sectioned answer with citations]
 ```
 
-**Computer-Use Automation architecture**
+</details>
+
+Python &nbsp;·&nbsp; Neo4j &nbsp;·&nbsp; FAISS &nbsp;·&nbsp; Llama 3.1 &nbsp; | &nbsp; [Code](https://github.com/DhyanICT/Trusted_Medical_AI) &nbsp;/&nbsp; [Evaluation](https://github.com/DhyanICT/Trusted_Medical_AI/tree/main/evaluations)
+
+<br>
+
+### Computer-Use Automation
+
+**Learn a browser task once. Replay it without an LLM.**
+
+<a href="https://github.com/DhyanICT/Computer-Use-Automation">
+  <img src="assets/automation-flow.png" width="100%" alt="Computer-Use Automation workflow: discover a browser task, save a reusable artifact, and replay it deterministically.">
+</a>
+
+A Python system that learns a browser task once, saves it as a reusable workflow and replays it with no LLM calls, with policy checks, data redaction and human handoff.
+
+<details>
+<summary><b>Architecture</b></summary>
 
 ```mermaid
 flowchart LR
@@ -176,41 +112,65 @@ flowchart LR
 
 </details>
 
-<details>
-<summary><b>Capabilities</b></summary>
+Python &nbsp;·&nbsp; Chrome DevTools Protocol &nbsp; | &nbsp; [Code](https://github.com/DhyanICT/Computer-Use-Automation) &nbsp;/&nbsp; [Design report](https://github.com/DhyanICT/Computer-Use-Automation/blob/main/REPORT.md)
+
 <br>
 
-**Languages.** TypeScript, Python, JavaScript, SQL, Java, Cypher
+## Experience
 
-**AI and retrieval.** RAG over knowledge graphs, embeddings (sentence-transformers), FAISS vector search, LLM agents and planners, retrieval evaluation (precision, recall, F1 at k)
+<a href="https://github.com/Next-Play-Games">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/plate-nextplay-dark.svg">
+  <img alt="Next Play Games: Software Development Intern on SportX1, June 2026 to present. 88 merged pull requests." src="assets/plate-nextplay-light.svg" width="100%">
+</picture>
+</a>
 
-**Backend.** Supabase (PostgreSQL, Auth, row-level security), FastAPI, Node.js, Express, REST API design, Zod validation, Square payments, Cloudflare Workers and Durable Objects
+**Software Development Intern, [Next Play Games](https://github.com/Next-Play-Games) (SportX1)** &nbsp;·&nbsp; June 2026 – present
 
-**Frontend and mobile.** React, React Native and Expo, Next.js, Vite, Tailwind CSS, Streamlit, Progressive Web Apps, Android (Java)
+SportX1 is a sports coaching and team-management platform. I work across its React Native app, React dashboard and Supabase/PostgreSQL backend.
 
-**Data.** PostgreSQL (schema design, migrations, permissions), Neo4j, pandas, Parquet, web scraping and ETL
+- **Payments:** Square payments, installment plans, recurring invoices and coupons (142 tests)
+- **Teams:** organization, group and team hierarchy with admin permissions
+- **AI personal trainer:** training plans, habit tracking and server-validated XP (74 tests)
+- **Coach messaging:** AI-assisted messages, scheduled announcements and reply threads (161 tests)
 
-**Testing and delivery.** Playwright, Jest, Supertest, Vitest, unittest, GitHub Actions deployment workflows, Chrome DevTools Protocol
+<br>
 
-| Capability | Where to see it |
-| --- | --- |
-| Production ownership | 88 merged PRs on SportX1 across mobile, web and database, from payments to deployment workflows |
-| LLM systems with measured quality | TrustMed retrieval and citation evals; CUA's split between LLM discovery and LLM-free replay |
-| Safety and data integrity | SportX1 database permissions and concurrency handling; CUA allowlist, redaction and handoff; Proofboard server-enforced voting |
-| Testing as part of the build | SportX1 test suites for payments (142), AI trainer (74) and messaging (161); Playwright two-user specs; Jest and Supertest |
-| End-to-end ownership | Features shipped from schema to mobile UI; deployed side projects with live links and documented trade-offs |
+## More projects
 
-</details>
+- **[Proofboard](https://github.com/DhyanICT/deepspace_proofboard)**: real-time group decisions with live presence and one vote per person ([live](https://proofboard-dhyan.app.space))
+- **[Task Board](https://github.com/DhyanICT/Task_Board_NextPlay)**: Next.js and Supabase Kanban board with row-level security ([live](https://taskboard-gamma-ten.vercel.app/))
+- **[Rules Quiz API](https://github.com/DhyanICT/nextplay-rules-fullstack)**: TypeScript and Express API with React and React Native clients
+- **[SparkScope](https://github.com/DhyanICT/Spark_Homes_Developer)**: offline-first PWA for estimating repair costs on site
+- **[CycleSync](https://github.com/DhyanICT/CycleSync)**: Android cycle tracker with an offline English and Gujarati chatbot
+- **[NYC taxi trip graph](https://github.com/DhyanICT/DPS1)**: Parquet-to-Neo4j pipeline built with pandas and Cypher
 
-## Activity
+<br>
+
+## Toolkit
+
+**Languages:** TypeScript, Python, JavaScript, SQL, Java<br>
+**Product:** React, React Native, Next.js, Node.js, FastAPI, Supabase, PostgreSQL<br>
+**AI:** RAG, knowledge graphs (Neo4j), FAISS, LLM agents, retrieval evaluation<br>
+**Testing:** Playwright, Jest, Vitest, GitHub Actions
+
+<br>
+
+## Recent activity
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg">
   <img alt="Recent GitHub contributions and top languages, refreshed weekly." src="assets/activity-light.svg" width="100%">
 </picture>
 
-<sub>Generated weekly by <a href="scripts/generate_activity.py">a small script</a> in this repository, with no third-party stats service.</sub>
+<sub>Refreshed weekly by [a small script](scripts/generate_activity.py) in this repository.</sub>
 
----
+<br>
 
-Reach me on [LinkedIn](https://www.linkedin.com/in/dhyan-patel-94101b22a/). <!-- TODO: add email and portfolio here too -->
+<p align="center">
+  <a href="#user-content-selected-work"><img src="https://img.shields.io/badge/Projects-0F1B2D?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMkVDNEI2IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI%2BPHBhdGggZD0iTTUgNGg0bDMgM2g3YTIgMiAwIDAgMSAyIDJ2OGEyIDIgMCAwIDEgLTIgMmgtMTRhMiAyIDAgMCAxIC0yIC0ydi0xMWEyIDIgMCAwIDEgMiAtMiIvPjwvc3ZnPg%3D%3D" alt="Projects" height="30"></a>&nbsp;
+  <a href="#user-content-experience"><img src="https://img.shields.io/badge/Experience-0F1B2D?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRjVBNTI0IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI%2BPHBhdGggZD0iTTMgOWEyIDIgMCAwIDEgMiAtMmgxNGEyIDIgMCAwIDEgMiAydjlhMiAyIDAgMCAxIC0yIDJoLTE0YTIgMiAwIDAgMSAtMiAtMnoiLz48cGF0aCBkPSJNOCA3di0yYTIgMiAwIDAgMSAyIC0yaDRhMiAyIDAgMCAxIDIgMnYyIi8%2BPHBhdGggZD0iTTMgMTNhMjAgMjAgMCAwIDAgMTggMCIvPjwvc3ZnPg%3D%3D" alt="Experience" height="30"></a>&nbsp;
+  <a href="https://www.linkedin.com/in/dhyan-patel-94101b22a/"><img src="https://img.shields.io/badge/LinkedIn-0F1B2D?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjM0I4RkUwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI%2BPHBhdGggZD0iTTggMTF2NSIvPjxwYXRoIGQ9Ik04IDh2LjAxIi8%2BPHBhdGggZD0iTTEyIDE2di01Ii8%2BPHBhdGggZD0iTTE2IDE2di0zYTIgMiAwIDEgMCAtNCAwIi8%2BPHBhdGggZD0iTTMgN2E0IDQgMCAwIDEgNCAtNGgxMGE0IDQgMCAwIDEgNCA0djEwYTQgNCAwIDAgMSAtNCA0aC0xMGE0IDQgMCAwIDEgLTQgLTR6Ii8%2BPC9zdmc%2B" alt="LinkedIn" height="30"></a>&nbsp;
+  <a href="https://leetcode.com/u/3oZegdX01z/"><img src="https://img.shields.io/badge/LeetCode-0F1B2D?style=for-the-badge&logo=leetcode&logoColor=FFA116" alt="LeetCode" height="30"></a>&nbsp;
+  <a href="https://drive.google.com/file/d/1RZgNlIfZNr8oAd9yvauug32a_R7NBcpE/view?usp=sharing"><img src="https://img.shields.io/badge/Resume-0F1B2D?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRUFGMEY3IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI%2BPHBhdGggZD0iTTE0IDN2NGExIDEgMCAwIDAgMSAxaDQiLz48cGF0aCBkPSJNMTcgMjFoLTEwYTIgMiAwIDAgMSAtMiAtMnYtMTRhMiAyIDAgMCAxIDIgLTJoN2w1IDV2MTFhMiAyIDAgMCAxIC0yIDJ6Ii8%2BPHBhdGggZD0iTTkgOWwxIDAiLz48cGF0aCBkPSJNOSAxM2w2IDAiLz48cGF0aCBkPSJNOSAxN2w2IDAiLz48L3N2Zz4%3D" alt="Resume" height="30"></a>
+</p>
