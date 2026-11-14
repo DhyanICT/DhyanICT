@@ -122,7 +122,7 @@ Python &nbsp;·&nbsp; Chrome DevTools Protocol &nbsp; | &nbsp; [Code](https://gi
 <a href="https://github.com/Next-Play-Games">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/plate-nextplay-dark.svg">
-  <img alt="Next Play Games: Software Development Intern on SportX1, June 2026 to present. 88 merged pull requests." src="assets/plate-nextplay-light.svg" width="100%">
+  <img alt="Next Play Games: Software Development Intern on SportX1, June 2026 to present. 130+ merged pull requests." src="assets/plate-nextplay-light.svg" width="100%">
 </picture>
 </a>
 
