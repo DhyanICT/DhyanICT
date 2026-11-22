@@ -11,7 +11,7 @@ script refuses to lower the number: a merged PR can't be "un-merged", so a drop
 almost always means the token lost access, not that the count really fell.
 
     ACTIVITY_TOKEN=... python scripts/update_pr_count.py
-    python scripts/update_pr_count.py --count 131     # offline test with a fixed number
+    python scripts/update_pr_count.py --count 175+    # set it by hand ("+" is kept)
 """
 from __future__ import annotations
 
@@ -31,8 +31,8 @@ README = ROOT / "README.md"
 LOGIN = os.environ.get("PROFILE_LOGIN", "DhyanICT")
 PLATE_SLUG = "plate-nextplay"
 
-CHIP = re.compile(r'("proof":\s*")(\d+)\+?( merged PRs")')
-ALT = re.compile(r"(\d+)\+?( merged pull requests)")
+CHIP = re.compile(r'("proof":\s*")(\d+)(\+?)( merged PRs")')
+ALT = re.compile(r"(\d+\+?)( merged pull requests)")
 
 
 def fetch_count(token: str, attempts: int = 4) -> int:
@@ -64,11 +64,11 @@ def fetch_count(token: str, attempts: int = 4) -> int:
     raise AssertionError("unreachable")
 
 
-def current_count(build_src: str) -> int:
+def current_label(build_src: str) -> str:
     match = CHIP.search(build_src)
     if not match:
         raise SystemExit('Could not find the "N merged PRs" chip in scripts/build_assets.py')
-    return int(match.group(2))
+    return match.group(2) + match.group(3)
 
 
 def rerender_plate() -> None:
@@ -83,31 +83,37 @@ def rerender_plate() -> None:
 
 def main() -> None:
     build_src = BUILD.read_text(encoding="utf-8")
-    old = current_count(build_src)
+    old_label = current_label(build_src)
+    old = int(old_label.rstrip("+"))
 
-    if "--count" in sys.argv:
-        new = int(sys.argv[sys.argv.index("--count") + 1])
+    manual = "--count" in sys.argv
+    if manual:
+        label = sys.argv[sys.argv.index("--count") + 1].strip()
+        if not re.fullmatch(r"\d+\+?", label):
+            raise SystemExit('Use a number like 175 or 175+')
+        new = int(label.rstrip("+"))
     else:
         token = os.environ.get("ACTIVITY_TOKEN")
         if not token:
             print("ACTIVITY_TOKEN is not set, so private PRs can't be counted; leaving the number unchanged.")
             return
         new = fetch_count(token)
+        label = str(new)
 
-    print(f"Merged PRs: profile shows {old}, GitHub search reports {new}")
-    if new < old:
+    print(f"Merged PRs: profile shows {old_label}, new value {label}")
+    if new < old and not manual:
         print("New count is lower than the current one; the token probably can't see every repo. Leaving it unchanged.")
         return
     readme_src = README.read_text(encoding="utf-8")
-    readme_new = ALT.sub(lambda m: f"{new}{m.group(2)}", readme_src, count=1)
-    if new == old and readme_new == readme_src:
+    readme_new = ALT.sub(lambda m: f"{label}{m.group(2)}", readme_src, count=1)
+    if label == old_label and readme_new == readme_src:
         print("Already up to date.")
         return
 
-    BUILD.write_text(CHIP.sub(lambda m: f"{m.group(1)}{new}{m.group(3)}", build_src, count=1), encoding="utf-8")
+    BUILD.write_text(CHIP.sub(lambda m: f"{m.group(1)}{label}{m.group(4)}", build_src, count=1), encoding="utf-8")
     README.write_text(readme_new, encoding="utf-8")
     rerender_plate()
-    print(f"Updated to {new} merged PRs")
+    print(f"Updated to {label} merged PRs")
 
 
 if __name__ == "__main__":

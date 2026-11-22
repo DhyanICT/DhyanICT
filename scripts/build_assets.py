@@ -27,7 +27,7 @@ PLATES = [
         "name": "Next Play Games",
         "line": "Software Development Intern on SportX1, June 2026 to present",
         "pipeline": ["register", "pay", "join team", "coach messages", "AI training"],
-        "proof": "88 merged PRs",
+        "proof": "150+ merged PRs",
     },
     {
         "slug": "plate-trustmed",
